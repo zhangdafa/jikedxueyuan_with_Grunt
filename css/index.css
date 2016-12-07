@@ -1,0 +1,1485 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+i {
+    font-style: normal;
+}
+
+#header {
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+
+#header img,
+#header ul,
+#header nav,
+#header div,
+#header span,
+#header a,
+#header h3,
+#header span,
+#header i {
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+a,
+dd,
+div,
+dl,
+dt,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    text-decoration: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+video {
+    display: block;
+}
+
+#header .child-header {
+    width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+}
+
+#header .logo {
+    width: 109px;
+    display: inline-block;
+    margin-right: 60px;
+    height: 60px;
+    float: left;
+}
+
+#header .logo img {
+    float: left;
+    width: 109px;
+    margin-top: 10px;
+    border: 0 none;
+}
+
+
+/*header nav*/
+
+#header nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+#header nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+}
+
+#header nav li:hover {
+    color: #35b558;
+    cursor: pointer;
+}
+
+#header nav a:hover {
+    color: #35b558;
+}
+
+#header nav li span.arrow-icon {
+    margin-bottom: 2px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+}
+
+#header nav li:hover span.arrow-icon {
+    margin-bottom: -2px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+#header nav li span {
+    margin-left: 5px;
+}
+
+
+/*下拉菜单的位置以及样式设置，默认不显示且保持透明*/
+
+#header nav .submenu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 61px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+}
+
+
+/*下拉菜单动画显示*/
+
+#header nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    animation: myfirst 0.8s ease normal;
+    -moz-animation: myfirst 0.8s ease normal;
+    -webkit-animation: myfirst 0.8s ease normal;
+}
+
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*课程下拉菜单中的h3标题样式*/
+
+#header nav .submenu h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+
+/*课程下拉菜单中的a标签样式*/
+
+#header nav .submenu a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+#header nav .vip-lesson a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    /*color: #666;*/
+}
+
+#header nav .vip-lesson a:hover {
+    background-color: #fafafa;
+}
+
+#header nav a {
+    color: #333;
+}
+
+#header nav .vip-lesson a i {
+    color: #bbb;
+    float: right;
+}
+
+
+/*allicon.png 的统一设置*/
+
+.vip-lesson span,
+.school-list span {
+    background: url(../img/allicon.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px!important;
+}
+
+.vip-lesson .kck-icon {
+    background-position: 0 -13px;
+}
+
+.vip-lesson .zyljt-icon {
+    background-position: -45px 0;
+}
+
+.vip-lesson .zstxt-icon {
+    background-position: -30px -13px;
+}
+
+.vip-lesson .jswd-icon {
+    background-position: 0 -27px;
+}
+
+.vip-lesson .wiki-icon {
+    background-position: -29px -27px;
+}
+
+.vip-lesson .sq-icon {
+    background-position: 0 2px;
+}
+
+.vip-lesson .zyxz-icon {
+    background-position: -30px 0;
+}
+
+.vip-lesson .xlkc-icon {
+    background: url(../img/xlkc2.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+
+.vip-lesson .kcbq-icon {
+    background-position: -15px -13px;
+}
+
+.vip-lesson .vip-icon {
+    background-position: -16px 0;
+}
+
+.school-list .web-icon {
+    background-position: -15px -27px;
+}
+
+
+/*allicon3.png 的统一设置*/
+
+.school-list span.python-icon,
+.school-list span.go-icon,
+.school-list span.ios-icon {
+    background: url(../img/allicon3.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+}
+
+.school-list span.python-icon {
+    background-position: -2px -2px;
+}
+
+.school-list span.go-icon {
+    background-position: -2px -38px;
+}
+
+.school-list span.ios-icon {
+    background-position: -2px -82px;
+}
+
+
+/*header icon-box*/
+
+#header .icon-box {
+    float: right;
+    text-align: right;
+    width: 200px;
+    margin-right: 10px;
+    height: 60px;
+    position: relative;
+}
+
+#header .icon-box span {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+#header .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+#header .search-icon:hover {
+    background: url(../img/search-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+#header .app-icon {
+    background: url(../img/app-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    position: relative;
+}
+
+#header .app-icon:hover {
+    background: url(../img/app-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+
+/*右侧下拉菜单*/
+
+.applist .submenu {
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 59px;
+    right: -10px;
+}
+
+.applist:hover .submenu {
+    display: block;
+    opacity: 1;
+    animation: listshow 0.8s ease normal;
+    -moz-animation: listshow 0.8s ease normal;
+    -webkit-animation: listshow 0.8s ease normal;
+}
+
+@keyframes listshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#header .icon-box .submenu {
+    right: -50px;
+}
+
+#header .icon-box .login-icon .submenu {
+    right: -14px;
+}
+
+
+/*#header .icon-box .login-icon .submenu{
+	right: 179px;
+    top: 61px;
+}*/
+
+#header .icon-box .app-icon .submenu img {
+    width: 100%;
+}
+
+#header .icon-box .submenu .top-icon {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    top: -8px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    display: inline-block;
+    background: #fff;
+    right: 50px;
+}
+
+#header .icon-box .login-icon .submenu .top-icon {
+    right: 13px;
+}
+
+#header .login-icon {
+    background: url(../img/login-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+.applist .submenu dd {
+    text-align: left;
+    font-size: 12px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.applist .submenu dd:hover {
+    background: #f5f5f5;
+}
+
+.applist .submenu dd a:hover {
+    color: #35b558;
+}
+
+.applist .submenu dd a {
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+
+.applist .submenu dd a.reg-btn,
+.applist .submenu dd a.login-btn {
+    width: 45%;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+#header .applist dd span {
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    margin-left: 0;
+    display: inline-block;
+}
+
+#header .applist .xxzx-icon {
+    background-position: -16px -15px;
+}
+
+#header .applist .grzy-icon {
+    background-position: -45px -1px;
+}
+
+#header .applist .xxtz-icon {
+    background-position: -16px -30px;
+}
+
+#header .applist .zhsz-icon {
+    background-position: -30px -1px;
+}
+
+
+/*search-box*/
+
+#header .searchbox {
+    display: none;
+    transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    opacity: 0;
+    height: 59px;
+    line-height: 59px;
+    width: 850px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: 0;
+}
+/*通过JS点击事件将 scale类加上*/
+.scale {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    display: block!important;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    animation: scalerun 0.8s ease normal;
+    -moz-animation: scalerun 2s line normal;
+    -webkit-animation: scalerun 0.8s ease normal;
+}
+
+@keyframes scalerun {
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+#header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(../img/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+#header .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+}
+
+#header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#web_search_header {
+    border: none;
+    outline: none;
+}
+
+#header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+
+#header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+/*-------------------------------container开始----------------------------------*/
+
+
+/*firstDiv开始*/
+
+#container .firstDiv {
+    width: 1000px;
+    margin: 20px auto 0 auto;
+}
+
+
+/*这一步好关键，后方插入空元素，清除浮动*/
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+/*滚动窗口*/
+
+#container .firstDiv .jk-banner {
+    width: 750px;
+    height: 330px;
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.jk-banner .banner-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.jk-banner .banner-container .banner-arrow-left {
+    display: none;
+    opacity: 0;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -40px;
+    z-index: 2;
+    cursor: pointer;
+    background: url(../img/arrow_left.png) no-repeat center;
+    background-size: 50px 80px;
+}
+
+
+
+.jk-banner .banner-container .banner-arrow-right {
+    display: none;
+    opacity: 0;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -40px;
+    z-index: 2;
+    cursor: pointer;
+    background: url(../img/arrow_left.png) no-repeat center;
+    background-size: 50px 80px;
+    transform:rotate(180deg); 
+}
+/*下方标示*/
+.jk-banner .banner-container .banner-pagination {
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    text-align: center;
+    width: 100%;
+    z-index: 800;
+    height: 0;
+    cursor: pointer;
+}
+
+
+.jk-banner .banner-container .banner-pagination .swiper-pagination-switch {
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.jk-banner .banner-container .banner-pagination .swiper-active-switch {
+    width: 8px;
+    height: 16px;
+    background: #35b558;
+    position: relative;
+    top: -4px;
+}
+.jk-banner .banner-container .swiper-wrapper{
+	/*transition: transform 1s ease 2s;*/
+	position: absolute;
+}
+
+.moveleft{
+	transform:translate(-750px);
+}
+
+.moveleft2{
+	transform:translate(-1500px);
+}
+
+.jk-banner .banner-container .swiper-slide {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 330px!important;
+}
+/*登陆界面*/
+
+#container .firstDiv .jk-login {
+    width: 240px;
+    height: 160px;
+    padding: 26px 29px 24px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+}
+
+.jk-login .user-info {
+    height: 57px;
+}
+
+.jk-login img {
+    float: left;
+    width: 57px;
+    height: 57px;
+    margin-right: 15px;
+}
+
+.jk-login .userName {
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 8px;
+}
+
+.jk-login .userStatus {
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 10px;
+}
+
+.jk-login .loginOn,
+.jk-login .registerNow {
+    font-size: 14px;
+    float: left;
+    display: inline-block;
+    width: 85px;
+    height: 32px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    color: #35b558;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+
+.jk-login .loginOn {
+    margin-right: 10px;
+}
+
+.jk-login .loginOn:hover,
+.jk-login .registerNow:hover {
+    background: #35b558;
+    color: #fff;
+}
+
+
+/*活动界面*/
+
+#container .firstDiv .jk-huodong {
+    float: left;
+    width: 240px;
+    height: 160px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+
+
+/*就业班选择*/
+
+#container .firstDiv .jk-jiuye {
+    float: left;
+    height: 130px;
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    position: relative;
+}
+
+.jk-jiuye .jiuyeban {
+    float: left;
+    width: 250px;
+    height: 130px;
+    border: 1px solid #f0f0f0;
+    color: #555;
+    text-align: center;
+    padding-top: 90px;
+    font-size: 12px;
+    transition: color .5s;
+}
+
+.jk-jiuye .jiuyeban:hover {
+    color: #35b558;
+}
+
+.jk-jiuye i {
+    float: left;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 0;
+    background: url(../img/jiuyeban.png) no-repeat center;
+    background-size: 52px;
+}
+
+.jk-jiuye .jiuyeban:first-child {
+    background: url(../img/php-icon.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+
+.jk-jiuye .jiuyeban:nth-child(2) {
+    background: url(../img/html5-icon.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+
+.jk-jiuye .jiuyeban:nth-child(3) {
+    background: url(../img/android-icon.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+
+.jk-jiuye .jiuyeban:nth-child(4) {
+    background: url(../img/ios-icon.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+
+
+/*firstDiv结束*/
+
+
+/*小系列课程推荐 jk-sku*/
+
+#container .jk-sku {
+    width: 1000px;
+    height: 270px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+#container .jk-sku ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.jk-sku ul li {
+    float: left;
+    width: 235px;
+    height: 100%;
+    margin-right: 20px;
+    border: 1px solid #e9e9e9;
+    transition: box-shadow .5s;
+}
+
+.jk-sku ul li:hover {
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.jk-sku ul li a {
+    display: block;
+    height: 100%;
+}
+
+
+/*最后一个节点，需要清除右外边距*/
+
+.jk-sku ul li:last-child {
+    margin-right: 0;
+}
+
+
+/*li img*/
+
+.jk-sku ul li img {
+    width: 100%;
+    height: 155px;
+}
+
+
+/*li div skuContainer*/
+
+.jk-sku ul li .skuContainer {
+    padding: 14px;
+    height: 113px;
+    position: relative;
+    background: #fff;
+}
+
+
+/*标题*/
+
+.jk-sku ul li .skuContainer .skuTitle {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #555;
+    line-height: 18px;
+    height: 36px;
+}
+
+
+/*简介*/
+
+.jk-sku ul li .skuContainer .skuInfo {
+    margin-top: 6px;
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+}
+
+.jk-sku ul li .skuContainer .skuPrice {
+    float: left;
+    font-size: 18px;
+    color: #ff5c00;
+    vertical-align: bottom;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.jk-sku ul li .skuContainer .skuPrice::before {
+    content: "¥";
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.jk-sku ul li .skuContainer .skuThrought {
+    float: left;
+    font-size: 12px;
+    color: #999;
+    margin-top: 14px;
+    text-decoration: line-through;
+    vertical-align: bottom;
+}
+
+.jk-sku ul li .skuContainer .skuNum {
+    display: inline-block;
+    height: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/*小系列课程推荐结束*/
+
+
+/*职业学院开始*/
+
+#container .jk-college {
+    width: 1000px;
+    margin: 0 auto;
+    height: 310px;
+    margin-bottom: 40px;
+}
+
+
+/*标题*/
+
+.jk-college h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+
+
+/*li标签*/
+
+.jk-college ul li {
+    float: left;
+    background: #ccc;
+    width: 240px;
+    height: 130px;
+    margin-left: 10px;
+    position: relative;
+}
+
+
+/*college-a标签*/
+
+.jk-college ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*college-img标签*/
+
+.jk-college ul li img {
+    display: inline-block;
+    width: 240px;
+    height: 130px;
+}
+
+
+/*college-i标签用于hover颜色渐变*/
+
+.jk-college ul li i {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity .8s;
+    -moz-transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+    -o-transition: opacity .8s;
+    z-index: 2000;
+}
+
+.jk-college ul li i:hover {
+    opacity: 0.3;
+}
+
+
+/*college-span标签*/
+
+.jk-college ul li span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 88px;
+}
+
+
+/*Web下a*/
+
+.jk-college ul .web {
+    width: 500px;
+    height: 270px;
+    margin-left: 0;
+}
+
+
+/*Web下img*/
+
+.jk-college ul .web img {
+    display: inline-block;
+    width: 500px;
+    height: 270px;
+}
+
+
+/*Web下span设置*/
+
+.jk-college ul .web span {
+    padding-top: 180px;
+    font-size: 20px;
+    background: url(../img/html5.png) no-repeat center 70px;
+    background-size: 55px 84px;
+}
+
+
+/*python*/
+
+.jk-college ul .python {
+    margin-bottom: 10px;
+}
+
+.jk-college ul .python span {
+    background: url(../img/python.png) no-repeat center 31px;
+    background-size: 36px 36px;
+}
+
+
+/*go*/
+
+.jk-college ul .go {
+    margin-bottom: 10px;
+}
+
+.jk-college ul .go span {
+    background: url(../img/go.png) no-repeat center 33px;
+    background-size: 36px 29px;
+}
+
+
+/*ios*/
+
+.jk-college ul .ios span {
+    background: url(../img/ios.png) no-repeat center 36px;
+    background-size: 32px 36px;
+}
+
+
+/*more*/
+
+.jk-college ul .more span {
+    background: url(../img/more.png) no-repeat center 36px;
+    background-size: 36px 36px;
+}
+
+.jk-college ul li:last-child a {
+    cursor: default;
+}
+
+
+/*职业学院结束*/
+
+
+/*会员课程开始*/
+
+#container .jk-vip {
+    width: 1000px;
+    margin: 0 auto;
+    height: 420px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.jk-vip h2 {
+    font-size: 18px;
+    color: #555;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+
+.jk-vip ul li {
+    float: left;
+    width: 158px;
+    height: 150px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    margin-right: 10px;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+}
+
+.jk-vip ul li:nth-child(6) {
+    margin-right: 0;
+}
+
+.jk-vip ul li:nth-child(12) {
+    margin-right: 0;
+}
+
+.jk-vip ul li:hover {
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.jk-vip ul li a {
+    display: block;
+    text-align: center;
+}
+
+.jk-vip ul li a img {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-top: 25px;
+}
+
+.jk-vip ul li a p {
+    font-size: 12px;
+    color: #555;
+    height: 22px;
+    line-height: 22px;
+}
+
+.jk-vip ul li a span {
+    display: block;
+    font-size: 12px;
+    color: #35b558;
+    height: 22px;
+    line-height: 22px;
+}
+
+
+/*vip all*/
+
+.jk-vip .vipAll:hover {
+    background: #35b558;
+    color: #fff;
+}
+
+.jk-vip .vipAll {
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+
+
+/*会员课程结束*/
+
+
+/*会员故事*/
+
+#container .jk-story {
+    width: 1000px;
+    margin: 0 auto;
+    height: 300px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.jk-story h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+
+
+/*会员故事*/
+
+
+/*footer开始*/
+
+#footer {
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+    margin-top: 50px;
+}
+
+
+/*尾巴第一部分最外层jkinfor*/
+
+#footer .jkinfor-block .jkinfor {
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+    padding-left: 224px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+
+/*jk-logo*/
+
+#footer .jkinfor-block .jkinfor .jk-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+}
+
+#footer .jkinfor-block .jkinfor .jk-logo img {
+    width: 109px;
+    height: 40px;
+    display: block;
+}
+
+#footer .jkinfor-block .jkinfor .jk-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+
+/*block dl*/
+
+#footer .jkinfor dl {
+    width: 135px;
+    color: #808080;
+    float: left;
+}
+
+#footer .jkinfor dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#footer .jkinfor dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+#footer .jkinfor dl dd a {
+    color: #999999;
+}
+
+#footer .jkinfor a:hover {
+    color: #35b558;
+}
+
+
+/*右侧热线及二维码*/
+
+#footer .jk-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+}
+
+#footer .jk-down .hot-tel {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#footer .jk-down .downCon {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 13px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+/*小图标*/
+
+#footer .jk-down .down-ios {
+    background: url(../img/icon-down-ios.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+#footer .jk-down .down-and {
+    background: url(../img/icon-down-and.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+
+/*二维码*/
+
+#footer .jk-down .downCon img {
+    display: inline-block;
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    display: none;
+}
+
+#footer .jk-down .downCon:hover img {
+    display: block;
+}
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+/*copyright*/
+
+#footer .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#footer .copyright a {
+    color: #999;
+}
+
+#footer .copyright a:hover {
+    color: #35B558;
+}
+
+#footer .copyright strong {
+    font-weight: 400;
+}
+
+
+/*微信*/
+
+#footer .copyright a.down-wechat {
+    float: right;
+    height: 15px;
+    width: 20px;
+    background: url(../img/icon-down-wechat.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}
+
+#footer .copyright a.down-sina {
+    float: right;
+    height: 15px;
+    width: 20px;
+    margin-right: 10px;
+    background: url(../img/icon-down-sina.png)no-repeat 0 0;
+    background-size: 20px 15px;
+}
+
+
+/*footer结束*/
